@@ -4,11 +4,9 @@ import MainNavigation from "../components/MainNavigation";
 const HomePage = () => {
   return (
     <>
-      <MainNavigation />
       <h1>My Home Page</h1>
       <p>
-        {/* Go to <a href="/products">The list of products</a> */}
-        Go to <Link to="/products">The list of products</Link>
+        Go to <Link to="/products">the list of products</Link>.
       </p>
     </>
   );
