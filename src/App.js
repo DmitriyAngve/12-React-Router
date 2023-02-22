@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import HomePage from "./pages/Home";
 
 createBrowserRouter(
   {
     path: "/",
+    element: <HomePage />,
   },
   {}
 );
@@ -26,4 +28,8 @@ export default App;
 // 1.5 Now is the second peace of information we typically want to add to our route objects is which Component should be loaded, when that route is active. => We might wnat to add a new component. First of all add new folder "pages" to hold the components that will be loaded as pages by the router.
 // 1.6 Create Hpme.js file in that folder (pages)
 // GO TO Home.js --->>>
+//
+// STEP 3:
+// 3.1 For establish this connection we ad danother key property: "element: " we define the element, so in the end the JSX code that should be loaded, when this "path: "/"" is active. So for element, you now define some JSX code, that should be rendered to the screen when this route is active. /// "element: <HomePage />"
+// I could add any JSX code here in "element"
 // 269 DEFINING ROUTES
