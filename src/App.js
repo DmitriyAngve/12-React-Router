@@ -1,10 +1,10 @@
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import {
+//   createBrowserRouter,
+//   createRoutesFromElements,
+//   RouterProvider,
+//   Route,
+// } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
