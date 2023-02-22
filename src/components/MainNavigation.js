@@ -7,10 +7,10 @@ const MainNavigation = () => {
       <nav>
         <ul>
           <li>
-            <Link>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link>Products</Link>
+            <Link to="/products">Products</Link>
           </li>
         </ul>
       </nav>
@@ -25,5 +25,8 @@ export default MainNavigation;
 // Let's add a Navigation Bar
 // STEP 1:
 // 1.1 Import "Link" /// "import { Link } from "react-router-dom""
-// 1.2
+// 1.2 JSX
+// 1.3 Add "to="/"" and "to="/products""
+//
+// GO TO App.js --->>>
 // 273 LAYOUTS AND NESTED ROUTES

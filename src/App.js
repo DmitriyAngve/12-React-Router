@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
+import RootLayout from "./pages/Root";
 
 // const routeDefinition = createRoutesFromElements(
 //   <Route>
@@ -19,8 +20,14 @@ import ProductsPage from "./pages/Products";
 // const router = createBrowserRouter(routeDefinition);
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/products", element: <ProductsPage /> },
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/products", element: <ProductsPage /> },
+    ],
+  },
 ]);
 
 function App() {
@@ -53,3 +60,19 @@ export default App;
 // 3.3 This "RouterProvider" Component has a special prop: "router={}" and pass into this prop "createBrowserRouter" stored in "router" /// "router={router}".
 // 3.4
 // 269 DEFINING ROUTES
+
+//
+
+// 273 LAYOUTS AND NESTED ROUTES
+//
+// STEP 2:
+// Let's add some layout that wraps all these routes, and that simply loads these route components inside of this wrapping layout component
+// 2.1 We need add ab extra route to your route definitions and use a "path" of "/".
+// 2.2 Add "element" that actually loads the layout wrapper that should be wrapped around the other routes. And we'll do the wrapping part in a second step. For the first step we need add "Root.js".
+// GO TO Root.js --->>>
+// 2.3 in Root.js rface.
+// 2.4 Add key for "element". /// "{ path: "/", element: <RootLayout /> }" with import
+// 2.5 Wrap these two routes with "<RootLayout />" me must add another property to this special route. The "children" property, that's takes an array of more routes definitions into this array.
+// So the "HomePage" and "ProductsPage" should be rendered.
+// 2.6 GO TO Root.js --->>>
+// 273 LAYOUTS AND NESTED ROUTES
