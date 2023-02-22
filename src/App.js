@@ -1,7 +1,7 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home";
 
-createBrowserRouter(
+const router = createBrowserRouter(
   {
     path: "/",
     element: <HomePage />,
@@ -10,7 +10,7 @@ createBrowserRouter(
 );
 
 function App() {
-  return <div></div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
@@ -31,5 +31,11 @@ export default App;
 //
 // STEP 3:
 // 3.1 For establish this connection we ad danother key property: "element: " we define the element, so in the end the JSX code that should be loaded, when this "path: "/"" is active. So for element, you now define some JSX code, that should be rendered to the screen when this route is active. /// "element: <HomePage />"
-// I could add any JSX code here in "element"
+// I could add any JSX code here in "element".
+// Let's stick to thus single route here in this router and let's see how we can now use this router.
+// 3.2 To use it, we must store the returned value of the create browser router function, in a variable or constant.
+// We need this constant ("router") to then tell React that this router should be rendered to the screen, or that router should be loaded and should render the appropriate pages to the screen. To tell React that this "router" should be used, we need to import another thing from react-router-dom.
+// Import "RouterProvider" component. This component is a regular component which we can use like this in our JSX code, and wrap it with other JSX code or add more JSX code to this "App" component. /// "return <RouterProvider />"
+// 3.3 This "RouterProvider" Component has a special prop: "router={}" and pass into this prop "createBrowserRouter" stored in "router" /// "router={router}".
+// 3.4
 // 269 DEFINING ROUTES
