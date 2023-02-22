@@ -24,7 +24,7 @@ export default HomePage;
 // 2.5 To establish this connection => GO TO App.js --->>>
 // 269 DEFINING ROUTES
 
-// 272. NAVIGATING BETWEEN PAGES WITH LINKS
+// 272 NAVIGATING BETWEEN PAGES WITH LINKS
 // STEP 1:
 // 1.1 If I could add some text below the title with links ("<a href="/products">The list of products</a>").
 // With this approach, if I clink on the link, I will see that if briefly flashes and turns to a cross and back a refresh icon. Reasin for that is that technically, we're sending a new request to server that's serving this website. Now, that server will serve back that single HTML page that makes up this single page application. Under the hood we load all the JavaScript code again, load the entire React application again and restart the React application. Let's avoid that.
@@ -32,4 +32,4 @@ export default HomePage;
 // 1.2 "import { Link } from "react-router-dom""
 // 1.3 Some changes: "Go to <Link to="/products">The list of products</Link>".
 // But there we then still specify the path we wanna go to. "Link" component is it does render an anchor element but it basically listens for clicks on that element, prevents the browser default of sending a HTTP request if the link is clicked, and instead simply takes a look at the route definitions to upgrade the page accordingly and load the appropriate content. Simply it will also change the URL but without sending a new HTTP request.
-// 272. NAVIGATING BETWEEN PAGES WITH LINKS
+// 272 NAVIGATING BETWEEN PAGES WITH LINKS
