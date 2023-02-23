@@ -1,13 +1,23 @@
+// import { Link, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation";
+// import MainNavigation from "../components/MainNavigation";
 
 const HomePage = () => {
+  // const navigate = useNavigate();
+
+  // function navigateHandler() {
+  //   navigate("/products");
+  // }
+
   return (
     <>
       <h1>My Home Page</h1>
       <p>
         Go to <Link to="/products">the list of products</Link>.
       </p>
+      {/* <p>
+        <button onClick={navigateHandler}>Navigate</button>
+      </p> */}
     </>
   );
 };
@@ -33,3 +43,14 @@ export default HomePage;
 // 1.3 Some changes: "Go to <Link to="/products">The list of products</Link>".
 // But there we then still specify the path we wanna go to. "Link" component is it does render an anchor element but it basically listens for clicks on that element, prevents the browser default of sending a HTTP request if the link is clicked, and instead simply takes a look at the route definitions to upgrade the page accordingly and load the appropriate content. Simply it will also change the URL but without sending a new HTTP request.
 // 272 NAVIGATING BETWEEN PAGES WITH LINKS
+
+// 276 NAVIGATING PROGRAMMATICALLY
+// STEP 1:
+// You might want to trigger a navigation action from inside Code, and you can do this by using another special feature provided by react-router-dom.
+// 1.1 You can import "useNavigate" hook, and call that in your functional components to get access to navigate function.
+// This navigate function can be call to trigger a navigation action, so to switch to a different route from inside your code programatically.
+// 1.2 Add "function navigateHandler() {}" and connect that to a button.
+// 1.3 Create button with "onClick = {navigateHandler}".
+// 1.4 Add "navigate" function inside of "navigateHandler" with "/products"
+// Button click only triggered a function, and inside that function. we then had the actual code, the programmatic imperative navigation code for mobing to different page
+// 276 NAVIGATING PROGRAMMATICALLY

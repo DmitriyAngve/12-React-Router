@@ -60,3 +60,5 @@ export default MainNavigation;
 // 1.4 Do it for another "NavLink".
 // 1.5  "to="/"" - always be active for all routes (all starts with "/"). For solving that react-router-dom gives us another prop: "end". End indicates that this link should only be considered active if the currently active route ends with this "path" after the URL
 // 275 WORKING WITH NAVIGATION LINKS (NAVLINKS)
+
+//
