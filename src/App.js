@@ -8,6 +8,7 @@ import ErrorPage from "./pages/Error";
 // } from "react-router-dom";
 
 import HomePage from "./pages/Home";
+import ProductDetailPage from "./pages/ProductDetail";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      { path: "/products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);
@@ -78,3 +80,13 @@ export default App;
 // So the "HomePage" and "ProductsPage" should be rendered.
 // 2.6 GO TO Root.js --->>>
 // 273 LAYOUTS AND NESTED ROUTES
+
+//
+
+// 277 DEFINING & USING DYNAMIC ROUTES
+// CAME FROM Products.js
+// STEP 2:
+// 2.1 Add new path for ProductsDetail.js. To avoid creating different "paths" for each product, we do this dynamically. React-router-dom supports dynamic path segments or path parameters.
+// 2.2 Let's add parameter to the path /// "path: "/products/:productId"". /// ":" - signals to react-router-dom that this part of the dynamic.
+// After that GO TO ProductDetail.js
+// 277 DEFINING & USING DYNAMIC ROUTES

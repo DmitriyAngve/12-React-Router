@@ -54,3 +54,5 @@ export default HomePage;
 // 1.4 Add "navigate" function inside of "navigateHandler" with "/products"
 // Button click only triggered a function, and inside that function. we then had the actual code, the programmatic imperative navigation code for mobing to different page
 // 276 NAVIGATING PROGRAMMATICALLY
+
+//
