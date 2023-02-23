@@ -22,7 +22,7 @@ function ProductsPage() {
         </li> */}
         {PRODUCTS.map((prod) => (
           <li key={prod.id}>
-            <Link to={`/products/${prod.id}`}>{prod.title}</Link>
+            <Link to={prod.id}>{prod.title}</Link>
           </li>
         ))}
       </ul>
@@ -51,3 +51,14 @@ export default ProductsPage;
 // 1.3 Add "const PRODUCTS = []" like an information from backend or database. The array contains of objects, where every has an ID and a title.
 // "{PRODUCTS.map((prod) => (<li key={prod.id}><Link to={`/products/${prod.id}`}>{prod.title}</Link></li>))}" NOW "Link" should be constructed dynamically.
 // 278 ADDING LINKS
+
+//
+
+// 279 UNDERSTANDING RELATIVE & ABSOLUTE PATHS
+// STEP 1:
+// 1.1 "<li key={prod.id}><Link to={prod.id} relative="">{prod.title}</Link></li>"
+// 1.2 Add "relative" - actives route path or to the currently active path in the URL
+// CAME FROM ProductDetail.js
+// STEP 3:
+// "relative" - removed.
+// 279 UNDERSTANDING RELATIVE & ABSOLUTE PATHS

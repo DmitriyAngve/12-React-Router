@@ -27,9 +27,9 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
-      { path: "/products/:productId", element: <ProductDetailPage /> },
+      { index: true, element: <HomePage /> }, // path: ""
+      { path: "products", element: <ProductsPage /> },
+      { path: "products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);
@@ -90,3 +90,9 @@ export default App;
 // 2.2 Let's add parameter to the path /// "path: "/products/:productId"". /// ":" - signals to react-router-dom that this part of the dynamic.
 // After that GO TO ProductDetail.js
 // 277 DEFINING & USING DYNAMIC ROUTES
+
+//
+
+// 280
+// "{ index: true..." - turns this route into a so-called index route, which simply means it's the default route that should be displayed if the parent route's path ("path: "/",") is currently active. So if will not be loaded for "products" or "products/productId" But if we're on just "/nothing" in this case, this index route will be activated
+// 280
