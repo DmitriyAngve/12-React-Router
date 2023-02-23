@@ -2,8 +2,12 @@ import { useParams } from "react-router-dom";
 
 function ProductDetailPage() {
   const params = useParams();
-
-  return <h1>Product Details!</h1>;
+  return (
+    <>
+      <h1>Product Details!</h1>
+      <p>{params.productId}</p>
+    </>
+  );
 }
 
 export default ProductDetailPage;
@@ -16,5 +20,6 @@ export default ProductDetailPage;
 // 2.1 Let's import "import { useParams } from "react-router-dom"". That tool which we get from r-r-d. This hook give us a params object, if we call it.
 // 2.2 Call "useParams()". /// "const params = useParams();"
 // This "params" is a simple JS object, which contains every dynamic path segment we define in our route definition as a property.
-// In this case I got a property called "productId" on this params object
+// In this case I got a property called "productId" on this params object, because in my route definition I chose "productId" (from App.js) as an identifier for this placeholder, for dynaic path segment
+// Add in JSX /// "<p>{params.productId}</p>"
 // 277 DEFINING & USING DYNAMIC ROUTES
