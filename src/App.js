@@ -41,7 +41,7 @@ function App() {
 export default App;
 
 // 269 DEFINING ROUTES
-//
+
 // Start from here, in App.js - in my root Component.
 // STEP 1:
 // 1.1 First of all: "import { createBrowserRouter } from "react-router-dom"", function which allows us to define our routes that we wanna support in this application
